@@ -1,11 +1,11 @@
 # unittest.Mock object explorer
 
 Sample usage
-`~/bin/test_patch.py nise.report.upload_to_azure_container`
+`~/bin/test_patch.py module.Foo.add
 Returns
 ```
 Patch importer returns:
- <function upload_to_azure_container at 0x7fe2326410e0>
+ <function add at 0x7fe2326410e0>
 Imported object has:
  ['__annotations__', '__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__get__', '__getattribute__', '__globals__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__kwdefaults__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']
 ```
@@ -20,5 +20,5 @@ Traceback (most recent call last):
     thing = _dot_lookup(thing, comp, import_path)
   File "/home/blentz/bin/test_patch.py", line 13, in _dot_lookup
     __import__(import_path)
-ModuleNotFoundError: No module named 'nise.report.upload_to_something_else'; 'nise.report' is not a package
+ModuleNotFoundError: No module named 'module.Foo.add'; 'module' is not a package
 ```
